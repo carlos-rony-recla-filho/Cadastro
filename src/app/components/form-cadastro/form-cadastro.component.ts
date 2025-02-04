@@ -67,8 +67,9 @@ export class FormCadastroComponent implements OnInit{
     if (this.form.valid) {
       this.userService.addUser(this.form.value);
       alert('Usuário cadastrado com sucesso!');
+
+      this.router.navigate(['/Lista-de-usuarios']);
       this.form.reset();
-      this.router.navigate(['/Lista de usuarios']);
     }else {
       alert('Por favor, preencha todos os campos corretamente.');
     }
