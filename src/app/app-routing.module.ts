@@ -5,7 +5,7 @@ import { ListaUsuariosComponent } from './pages/lista-usuarios/lista-usuarios.co
 
 const routes: Routes = [
   {path: '', component: CadastroComponent},
-  {path: 'Lista-de-usuarios', component: ListaUsuariosComponent},
+  {path: 'ListaUsuarios', component: ListaUsuariosComponent},
 ];
 
 @NgModule({
