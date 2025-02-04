@@ -1,0 +1,27 @@
+<div>
+  <label class="title-form">Cadastro de Pessoas</label>
+</div>
+<form [formGroup]="form">
+  <input type="text" maxlength=150 placeholder="Nome" formControlName="nome" required name="nome" maxlength="150" oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '')">
+  <span class="error" *ngIf="form.get('nome')?.invalid && form.get('nome')?.touched">
+    Digite seu nome.</span>
+  <input type="text" placeholder="CPF" autofocus [maxLength]=14 formControlName="cpf" mask="000.000.000-00" required inputmode="numeric">
+  <span class="error" *ngIf="form.get('cpf')?.invalid && form.get('cpf')?.touched">
+    Digite um CPF válido.</span>
+  <input type="date" placeholder="Data de nascimento" formControlName="data" max="2007" required>
+  <span class="error" *ngIf="form.get('data')?.invalid && form.get('data')?.touched">
+    Digite a data de seu nascimento. <br> Com pelo menos 18 anos de idade</span>
+  <input type="email" placeholder="E-mail" [maxlength]=200 formControlName="email" required>
+  <span class="error" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+    Digite um e-mail válido.</span>
+  <input type="text" placeholder="CEP" for="cep" formControlName="cep" required>
+  <span class="error" *ngIf="form.get('cep')?.invalid && form.get('cep')?.touched">
+    Digite um CEP válido.</span>
+  <input type="text" placeholder="Lagradoro" for="logradouro" formControlName="logradouro" >
+  <input type="text" placeholder="Bairro" for="bairro" formControlName="bairro" >
+  <input type="text" placeholder="Cidade" for="cidade" formControlName="cidade" >
+  <input type="text" placeholder="Estado" for="estado" formControlName="estado" >
+  <button type="submit" (click)="cadastrar()">Cadastrar</button>
+  <label routerLink="Lista de usuários">Lista de usuários</label>
+</form>
+

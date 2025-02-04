@@ -1,0 +1,28 @@
+<div class="nav">
+  <h2>Lista de Usuários</h2>
+  <button routerLink="/">Voltar</button>
+</div>
+<div class="table-container">
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Idade</th>
+        <th>E-mail</th>
+        <th>CEP</th>
+        <th>Endereço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.nome }}</td>
+        <td>{{ user.cpf }}</td>
+        <td>{{ user.data | idade }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.cep }}</td>
+        <td>{{ user.logradouro }}, {{ user.bairro }}, {{ user.cidade }} - {{ user.estado }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

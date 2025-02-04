@@ -1,0 +1,9 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  background:rgba(9,31,41,1);
+}
+div{
+  width: 100%;
+  margin: 5px;
+}

@@ -1,0 +1,7 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:rgba(9,31,41,1);
+}
